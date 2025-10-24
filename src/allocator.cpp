@@ -68,7 +68,7 @@ std::shared_ptr<Allocator> Allocator::create() {
 }
 
 std::expected<Allocation, Allocator::Error> Allocator::allocate(size_t size) {
-    return allocate_near({}, size, std::numeric_limits<size_t>::max());
+    return allocate_near({}, size, 0x4000'0000);
 }
 
 std::expected<Allocation, Allocator::Error> Allocator::allocate_near(

@@ -93,7 +93,7 @@ public:
     /// @param max_distance The maximum distance from the target address.
     /// @return The Allocation or an Allocator::Error if the allocation failed.
     [[nodiscard]] std::expected<Allocation, Error> allocate_near(
-        const std::vector<uint8_t*>& desired_addresses, size_t size, size_t max_distance = 0x7FFF'FFFF);
+        const std::vector<uint8_t*>& desired_addresses, size_t size, size_t max_distance = 0x4000'0000);
 
 protected:
     friend Allocation;
